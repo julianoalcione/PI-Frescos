@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "0f88ea48-259b-4a7e-becb-3e1f932ee24e",
+		"_postman_id": "a4c9c153-b69c-453b-86e6-2767b2ec2f6b",
 		"name": "PraticaIntegradora",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -794,6 +794,147 @@
 						}
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "mercado pago",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "get all",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/mercado-pago/users",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"mercado-pago",
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "credit card",
+					"item": [
+						{
+							"name": "credit card",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/mercado-pago/credit-card",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"mercado-pago",
+										"credit-card"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "save credit card",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"35e44349846ce01dd3feff2f307c5f2f\",\n    \"paymentMethodId\": \"master\"\n\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/api/v1/mercado-pago/credit-card",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"mercado-pago",
+										"credit-card"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "credit card delete",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "{{token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:8080/api/v1/mercado-pago/credit-card/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"mercado-pago",
+										"credit-card",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "paymento empty",
+					"item": []
 				}
 			]
 		},
